@@ -3,18 +3,18 @@ body {
 }
 .button {
   /* background-color: rgb(161, 0, 113);  */
-  background-color: black; 
+  background-color: rgb(255, 218, 26); 
   border: black;
   border-style: solid;
-  color: white;
+  color: rgb(0, 81, 186); 
   padding: 20px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 28px;
-  width: 34%;
-  margin-left: 33%;
-  margin-right: 33%;
+  /* width: 34%; */
+  /* margin-left: 33%; */
+  /* margin-right: 33%; */
 }
 
 .upgradeButton {
