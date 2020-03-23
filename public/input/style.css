@@ -1,0 +1,33 @@
+body {
+  margin: 0px;
+}
+.button {
+  /* background-color: rgb(161, 0, 113);  */
+  background-color: black; 
+  border: black;
+  border-style: solid;
+  color: white;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  width: 34%;
+  margin-left: 33%;
+  margin-right: 33%;
+}
+
+.upgradeButton {
+  background-color: black; 
+  border: black;
+  border-style: solid;
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  width: 20%;
+  margin-left: 70%;
+  margin-right: 10%;
+}
