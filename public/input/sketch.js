@@ -12,7 +12,7 @@ let lastClick = 0;
 let isFirstClick = true;
 
 //buttons
-let dropButt, typeButt, rotateButt, scaleButt, moveButt;
+let dropButt, typeButt, colorButt, rotateButt, scaleButt, moveButt;
 let playerNum = 0;
 
 function setup() {
@@ -26,7 +26,7 @@ function setup() {
 
   //set up buttons
   dropButt = createButton('SLAPPA')
-    .position(width/4, height/6)
+    .position(width/4, height/7)
     .class("button")
     .mousePressed(()=>{
       if (millis() - lastClick >= clickDebounce && !isFirstClick){
@@ -38,7 +38,7 @@ function setup() {
       isFirstClick = false;
     });
   typeButt = createButton('BESKRIVNING')
-    .position(width/4, 2*height/6)
+    .position(width/4, 2*height/7)
     .class("button")
     .mousePressed(()=>{
       if (millis() - lastClick >= clickDebounce && !isFirstClick){
@@ -50,8 +50,21 @@ function setup() {
       }
       isFirstClick = false;
     });
+  colorButt = createButton('FARG')
+    .position(width/4, 3*height/7)
+    .class("button")
+    .mousePressed(()=>{
+      if (millis() - lastClick >= clickDebounce && !isFirstClick){
+        socket.emit("color", {player: playerNum});
+        console.log(playerNum);
+        lastClick = millis();
+        isFirstClick = true;
+        return;
+      }
+      isFirstClick = false;
+    });
   rotateButt = createButton('VINKEL')
-    .position(width/4, 3*height/6)
+    .position(width/4, 4*height/7)
     .class("button")
     .mousePressed(()=>{
       if (millis() - lastClick >= clickDebounce && !isFirstClick){
@@ -63,7 +76,7 @@ function setup() {
       isFirstClick = false;
     });
   scaleButt = createButton('SKALLA')
-    .position(width/4, 4*height/6)
+    .position(width/4, 5*height/7)
     .class("button")
     .mousePressed(()=>{
       if (millis() - lastClick >= clickDebounce && !isFirstClick){
@@ -75,7 +88,7 @@ function setup() {
       isFirstClick = false;
     });
   moveButt = createButton('PLATS')
-    .position(width/4, 5*height/6)
+    .position(width/4, 6*height/7)
     .class("button")
     .mousePressed(()=>{
       if (millis() - lastClick >= clickDebounce && !isFirstClick){

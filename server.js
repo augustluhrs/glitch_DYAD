@@ -44,6 +44,10 @@ inputs.on('connection', function(socket){
     console.log("player " + player + ": beskrivning/type");
     unity.emit('type', player);
   });
+  socket.on('color', function(player){
+    console.log("player " + player + ": farg/color");
+    unity.emit('color', player);
+  });
   socket.on('rotate', function(player){
     console.log("player " + player + ": vinkel/rotate");
     unity.emit('rotate', player);
